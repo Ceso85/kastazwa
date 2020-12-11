@@ -1,0 +1,1526 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    top: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: inline-block;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    padding-top: 10px;
+    align-items: center;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 420px) {
+    header {
+    padding-top: 10px;
+    position: fixed;
+    background-color: transparent;
+    }
+}
+
+.logo {
+    position: fixed;
+    border-radius: 10px;
+}
+
+.logo:hover {
+    position: fixed;
+    cursor: pointer;
+}
+
+nav {
+    font-size: 15px;
+    position: relative;
+    left: 600px;
+}
+
+@media only screen and (max-width: 1024px) {
+    nav {
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+    font-size: 12.5px;
+    position: absolute;
+    top: 20px;
+    left: 180px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    nav {
+    font-size: 7px;
+    position: absolute;
+    left: 100px;
+    }
+}
+
+span:hover {
+    cursor: pointer;
+    color: red;
+}
+
+span {
+    margin: 0 10px;
+    font-family: fantasy serif;
+    text-shadow: 1px 1px;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 420px) {
+    span {
+    margin: 4px;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.storagebut {
+    display: inline-block;
+    position: relative;
+}
+
+.storage {
+    display: inline-block;
+    float: none;
+}
+
+.storagebox{
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: fantasy serif;
+    text-shadow: 1px 1px;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 1024px) {
+    .storagebox {
+    top: 30px;
+    left: -40px;
+    line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .storagebox {
+    font-size: 12.5px;
+    top: 20px;
+    left: -70px;
+    line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .storagebox {
+    top: 20px;
+    left: -40px;
+    line-height: 20px;
+    font-size: 7px;
+    }
+}
+
+.storagebox a:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.storagebut:hover .storagebox {display: block;}
+
+body {
+    display: block;
+    width: 100%;
+    border: 10px 10px 0px 10px solid red;
+    /*margin-bottom: 30px;*/
+    box-shadow: 30px;
+    background-color: black;
+    position: relative;
+}
+
+/*h1 {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    color: black;
+    font-size: 80px;
+    font-family: fantasy-serif;
+    text-shadow: 2px 2px red;
+}*/
+
+h4 {
+    position: absolute;
+    top: 80%;
+    color: transparent;
+    font-size: 20px;
+    font-family: fantasy-serif;
+    text-shadow: 2px 2px whitesmoke;
+    right: 5%;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+    h4 {
+    top: 90%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    h4 {
+    display: none;
+    }
+}
+
+.righta {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 350px;
+    right: 40px;
+    transform: rotate(-45deg);
+    box-shadow: 5px 5px;
+    color: rgba(255, 0, 0, 0.705);
+    transition-duration: 300ms;
+    transition-property: right;
+    z-index: 2;
+}
+
+.righta:hover {
+    cursor: pointer;
+    right: 30px;
+}
+
+@media only screen and (max-width: 768px), screen and (max-height: 420px)  {
+    .righta {
+    display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .righta {
+    display: none;
+    }
+}
+
+.lefta {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 350px;
+    left: 40px;
+    transform: rotate(-45deg);
+    box-shadow: -5px -5px;
+    color: rgba(255, 0, 0, 0.705);
+    transition-duration: 300ms;
+    transition-property: right;
+    z-index: 2;
+}
+
+.lefta:hover {
+    cursor: pointer;
+    left: 30px;
+}
+
+@media only screen and (max-width: 768px), screen and (max-height: 420px)  {
+    .lefta {
+    display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .lefta {
+    display: none;
+    }
+}
+
+/* home section*/
+
+.home {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+}
+
+@keyframes newep {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+    }
+
+.homepic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Profile.jpg");
+    filter: blur(2px) brightness(20%);
+    box-shadow: 5px grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    animation-name: newep;
+    animation-duration: 12s;
+    animation-timing-function: ease-in;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .homepic {
+    top: 120px;
+    margin-top: none;
+    }
+}
+
+@media only screen and (max-width: 768px), screen and (max-height: 420px)  {
+    .homepic {
+    top: 0px;
+    margin-top: none;
+    }
+}
+
+video {
+    position: fixed;
+    filter: blur(2px);
+    left: 500px;
+    animation-name: newep;
+    animation-duration: 12s;
+    animation-timing-function: ease-in;
+}
+
+@media only screen and (max-width: 1024px) {
+    video {
+    display: none;
+    }
+}
+
+/* waiting section */
+
+/*.waiting {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}*/
+
+@keyframes newep {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+    }
+
+.waitingtxt h1 {
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    animation-name: newep;
+    animation-duration: 8s;
+    animation-timing-function: ease-in;
+}
+
+@media only screen and (max-width: 420px) {
+    .waitingtxt h1 {
+    font-size: 40px;
+    }
+}
+
+
+.waitingtxt h2 {
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    animation-name: newep;
+    animation-duration: 8s;
+    animation-timing-function: ease-in;
+}
+
+@media only screen and (max-width: 420px) {
+    .waitingtxt h2 {
+    font-size: 40px;
+    }
+}
+
+
+.waitingtxt h3 {
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    animation-name: newep;
+    animation-duration: 8s;
+    animation-timing-function: ease-in; 
+}
+
+@media only screen and (max-width: 420px) {
+    .waitingtxt h3 {
+    font-size: 30px;
+    }
+}
+
+
+.waitingtxt h4 {
+    font-size: 30px;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    animation-name: newep;
+    animation-duration: 8s;
+    animation-timing-function: ease-in; 
+}
+
+
+    .waitingtxt {
+    text-align: right;
+    position: relative;
+    top: 200px;
+    left: 200px;
+    line-height: 100px;
+    z-index: 2;
+    color: black;
+    text-shadow: 1px 1px whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+    .waitingtxt {
+    display: flex;
+    flex-direction: column;
+    top: 410px;
+    line-height: 70px;
+    font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .waitingtxt {
+    display: block;
+    top: 160px;
+    left: 70px;
+    }
+}
+
+/* living section */
+
+#living {
+    text-decoration: none !important;
+}
+
+.living {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .living {
+    height: 1024px;
+    }
+}
+
+.livingcont {
+    width: 560px;
+    height: 400px;
+    background-color: transparent;
+    position: relative;
+    left: 10%;
+}
+
+.youvideo iframe {
+    position: absolute;
+    top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .youvideo iframe {
+    top: 40px;
+    width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .youvideo iframe {
+    top: 80px;
+    width: 100%;
+    }
+}
+
+.dsp {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 65%;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 1024px) {
+    .dsp {
+    top: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dsp {
+    top: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .dsp {
+    top: 50%;
+    border: 0px;
+    }
+}
+
+.amazon {
+    right: 50%;
+    animation-name: bouncelogoI;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .amazon {
+    right: 32.5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .amazon {
+    right: 65%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .amazon {
+    width: 15%;
+    top: 52.5%;
+    }
+}
+
+.apple {
+    right: 40%;
+    animation-name: bouncelogoII;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .apple {
+    right: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .apple {
+    right: 7%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .apple {
+    width: 15%;
+    height: auto;
+    }
+}
+
+.bandcamp {
+    right: 80%;
+    animation-name: bouncelogoI;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .bandcamp {
+    right: 70%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bandcamp {
+    right: 84%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .bandcamp {
+    width: 15%;
+    height: auto;
+    }
+}
+
+.youtubemusic {
+    right: 60%;
+    animation-name: bouncelogoII;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .youtubemusic {
+    right: 45%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .youtubemusic {
+    right: 20%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .youtubemusic {
+    width: 15%;
+    top: 52.5%;
+    }
+}
+
+.soundcloud {
+    right: 90%;
+    animation-name: bouncelogoI;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .soundcloud {
+    right: 82.5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .soundcloud {
+    right: 50%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .soundcloud {
+    width: 15%;
+    height: auto;
+    }
+}
+
+.spotify {
+    right: 70%;
+    animation-name: bouncelogoI;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+    .spotify {
+    right: 57.5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .spotify {
+    right: 35%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .spotify {
+    width: 15%;
+    height: auto;
+    }
+}
+
+@keyframes bouncelogoI {
+    0% {transform: translateY(0px) rotate(0);}
+    25% {transform: translateY(+10px) rotate(2deg);}
+    50% {transform: translateY(0px) rotate(-2deg);}
+    75% {transform: translateY(-10px) rotate(2deg);}
+    100% {transform: translateY(0px) rotate(0deg);}
+    }
+
+@keyframes bouncelogoII {
+        0% {transform: translateY(0px) rotate(0);}
+        25% {transform: translateY(-10px) rotate(-2deg);}
+        50% {transform: translateY(0px) rotate(2deg);}
+        75% {transform: translateY(+10px) rotate(-2deg);}
+        100% {transform: translateY(0px) rotate(0deg);}
+        }
+
+@keyframes bouncelogoIII {
+            0% {transform: translateY(0px) rotate(0);}
+            25% {transform: translateY(+15px) rotate(2deg);}
+            50% {transform: translateY(0px) rotate(-2deg);}
+            75% {transform: translateY(-15px) rotate(2deg);}
+            100% {transform: translateY(0px) rotate(0px);}
+            }
+
+/* screaming section */
+
+.screaming {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .screaming {
+    height: 1024px;
+    }
+}
+
+#tx1 {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    resize: vertical;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    #tx1 {
+    top: 290px;
+    width: 75%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #tx1 {
+    top: 180px;
+    width: 80%;
+    height: 15%;
+    left: 50px;
+    }
+}
+
+#tx2 {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    #tx2 {
+    top: 130px;
+    width: 75%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #tx2 {
+    top: 60px;
+    width: 80%;
+    left: 50px;
+    }
+}
+
+#tx3 {
+    position: absolute;
+    top: 80px;
+    left: 320px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    #tx3 {
+    top: 210px;
+    left: 100px;
+    width: 75%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #tx3 {
+    top: 120px;
+    width: 80%;
+    left: 50px;
+    }
+}
+
+.scream {
+    color: white;
+    font-family: fantasy-serif;
+    border: 2px solid white;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top: 100px;
+    left: 850px;
+    transition: transform 2s;
+}
+
+.scream:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.comments {
+    width: 680px;
+    flex-direction: column;
+    position: relative;
+    top: 240px;
+    left: 100px;
+    padding: 10px;
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    .comments {
+    top: 250px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .comments {
+    top: 400px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .comments {
+    top: 370px;
+    left: 40px;
+    }
+}
+
+/* guest section */
+
+.guest {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .guest {
+    height: 1024px;
+    }
+}
+
+.pic1 {
+    position: absolute;
+    left: 10%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 420px) {
+    div .pic1 {
+    top: 10%;
+    z-index: 0;
+    }
+}
+
+
+.pic2 {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+}
+
+@media only screen and (max-width: 420px) {
+    div .pic2 {
+    top: 40%;
+    z-index: 0;
+    }
+}
+
+
+.pic3 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+}
+
+@media only screen and (max-width: 420px) {
+    div .pic3 {
+    top: 45%;
+    z-index: 0;
+    }
+}
+
+
+/* store section */
+
+.store {
+    display: flex;
+    background-color: transparent;
+    width: 100%;
+    height: 800px;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .store {
+    height: 1024px;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.tracklisa {
+    color: white;
+    font-size: 30px;
+    font-family: fantasy-serif;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .tracklisa {
+    top: 80px;
+    left: 100px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tracklisa {
+    top: 100px;
+    left: 80px;
+    font-size: 20px;
+    }
+}
+
+
+.tracklisb {
+    color: white;
+    font-size: 30px;
+    font-family: fantasy-serif;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .tracklisb {
+    top: 200px;
+    left: 100px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tracklisb {
+    top: 100px;
+    left: 80px;
+    font-size: 20px;
+    }
+}
+
+
+.store h4 {
+    position: absolute;
+    top: 95%;
+    /*font-family: fantasy-serif;
+    text-shadow: 2px 2px red;*/
+}
+
+/* walking on a wire text */
+
+.walkbox {
+    display: none;
+}
+
+.walk:hover + .walkbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 625px;
+    border: 5px solid white;
+    padding-top: 20px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 22px;
+    z-index: 1;
+    position: absolute;
+    top: -60px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .walk:hover + .walkbox {
+        display: none;
+    }
+}
+
+/* a midsummer night (helena came in rhymes) text */
+
+
+.nightbox {
+    display: none;
+}
+
+.night:hover + .nightbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 650px;
+    border: 5px solid white;
+    padding-top: 10px;
+    color: white;
+    font-style: italic;
+    font-size: 10px;
+    line-height: 14px;
+    z-index: 1;
+    position: absolute;
+    top: -70px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .night:hover + .nightbox {
+        display: none;
+    }
+}
+
+/* it's all A big nothing text */
+
+.bigbox {
+    display: none;
+}
+
+.big:hover + .bigbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 650px;
+    border: 5px solid white;
+    padding-top: 10px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -70px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .big:hover + .bigbox {
+        display: none;
+    }
+}
+
+/* no Country for old lovers text */
+
+.countrybox {
+    display: none;
+}
+
+.country:hover + .countrybox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 625px;
+    border: 5px solid white;
+    padding: 10px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -70px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .country:hover + .countrybox {
+        display: none;
+    }
+}
+
+/* talk about the weather text */
+
+.weatherbox {
+    display: none;
+}
+
+.weather:hover + .weatherbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 450px;
+    height: 600px;
+    border: 5px solid white;
+    padding: 30px;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -70px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .weather:hover + .weatherbox {
+        display: none;
+    }
+}
+
+/* the dreamcatcher text */
+
+.dreambox {
+    display: none;
+}
+
+.dream:hover + .dreambox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    padding-top: 30px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .dream:hover + .dreambox {
+        display: none;
+    }
+}
+
+/* still here text */
+
+.stillbox {
+    display: none;
+}
+
+.still:hover + .stillbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 620px;
+    padding: 5px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .still:hover + .stillbox {
+        display: none;
+    }
+}
+
+/* springtime destroys text */
+
+.springbox {
+    display: none;
+}
+
+.spring:hover + .springbox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 620px;
+    padding: 5px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .spring:hover + .springbox {
+        display: none;
+    }
+}
+
+/* roulette text */
+
+.roulettebox {
+    display: none;
+}
+
+.roulette:hover + .roulettebox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 620px;
+    padding: 5px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .roulette:hover + .roulettebox {
+        display: none;
+    }
+}
+
+/* a shapeless figure 1 text */
+
+.figure1box {
+    display: none;
+}
+
+.figure1:hover + .figure1box {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 580px;
+    padding-top: 50px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .figure1:hover + .figure1box {
+        display: none;
+    }
+}
+
+/* shoot the piano player text */
+
+.pianobox {
+    display: none;
+}
+
+.piano:hover + .pianobox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 550px;
+    padding-top: 80px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .piano:hover + .pianobox {
+        display: none;
+    }
+}
+
+/* a shapeless figure 5 text */
+
+.figure5box {
+    display: none;
+}
+
+.figure5:hover + .figure5box {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 620px;
+    padding: 5px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .figure5:hover + .figure5box {
+        display: none;
+    }
+}
+
+/* your distance is a road to run text */
+
+.distancebox {
+    display: none;
+}
+
+.distance:hover + .distancebox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 620px;
+    padding: 5px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .distance:hover + .distancebox {
+        display: none;
+    }
+}
+
+/* a coincidence text */
+
+.coincidencebox {
+    display: none;
+}
+
+.coincidence:hover + .coincidencebox {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    width: 400px;
+    height: 550px;
+    padding-top: 80px;
+    border: 5px solid white;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 25px;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+    left: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .coincidence:hover + .coincidencebox {
+        display: none;
+    }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 30px;
+    align-items: space-between;
+    overflow: hidden;
+    z-index: 2;
+    margin-top: 250px;
+}
+
+@media only screen and (max-width: 1024px) {
+    footer {
+    position: relative;
+    left: 20px;
+    }
+}
+
+@media only screen and (max-width: 768) {
+    footer {
+    position: relative;
+    left: 20px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    footer {
+    display: block;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    top: 300px;
+    width: 100%;
+    font-size: 10px;
+    }
+}
+
+footer img {
+    position: relative;
+    left: 50px;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    footer img {
+    left: 0px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    footer img {
+    left: 0px;
+    }
+}
+
+h5 {
+    position: relative;
+    left: 70px;
+    font-size: 15px;
+    margin-right: 70px;
+    color: white;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 420px) {
+    h5 {
+    font-size: 12px;
+    }
+}
+
+.acca {
+    position: relative;
+    left: 500px;
+    }
+
+
+@media only screen and (max-width: 1024px) {
+    .acca {
+    position: relative;
+    left: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .acca {
+    position: relative;
+    left: 40px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .acca {
+    left: 0px;
+    }
+}
+
+.deu {
+    display: flex;
+    position: relative;
+    top: 150px;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.eng {
+    display: flex;
+    position: relative;
+    top: 250px;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+
+
